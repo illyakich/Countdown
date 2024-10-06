@@ -1,9 +1,11 @@
-﻿void Countdown(int number)
+﻿int Countdown(int number)
 {
-    while (number != 1)
+    while (number != 0)
     {
-            number -= 1;
         Console.WriteLine(number);
+        return number - Countdown(number - 1);
     }
+     
+    return number;
 }
-Countdown(11);
+Countdown(10);
